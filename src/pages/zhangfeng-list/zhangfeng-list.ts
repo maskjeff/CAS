@@ -28,14 +28,30 @@ export class ZhangfengList
     ]
   }
 
-  sort1()
+  mySort(type:string)
   {
+    switch(type)
+    {
+      case "up":
       this.Members.sort(function(a,b){return a.id - b.id})
+      break;
+
+      case "down":
+      this.Members.sort(function(a,b){return b.id - a.id})
+      break;
+
+      case "random":
+      this.Members.sort(function(a,b){return Math.random() - Math.random()})
+      break;
+
+
+    }
+      
   }
 
   sort2()
   {
-      this.Members.sort(function(a,b){return b.id - b.id})
+      this.Members.sort(function(a,b){return b.id - a.id})
   }
   sort3()
   {
