@@ -1,0 +1,33 @@
+<!--
+  Generated template for the ZhangfengList page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>zhangfeng-list</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  
+<ion-list>
+  <ion-item *ngFor="let member of Members">
+    <ion-avatar item-left>
+      <img src="../../assets/head/{{member.id}}.PNG">
+    </ion-avatar>
+    <p>ID: {{member.id}}</p>
+    <p *ngIf = "member.sex=='M'" >Name: {{member.name}}</p>
+    <p *ngIf = "member.sex!='M'" color="red" >Name: {{member.name}}</p>
+  </ion-item>
+</ion-list>
+
+<button ion-button (click) = "sort1()">正序</button>
+<button ion-button (click) = "sort2()">倒序</button>
+<button ion-button (click) = "sort3()">随机</button>
+
+</ion-content>
+
