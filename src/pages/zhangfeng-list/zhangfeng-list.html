@@ -13,8 +13,8 @@
       <ion-avatar item-left>
         <img src="../../assets/head/{{member.id}}.PNG">
       </ion-avatar>
-      <p>ID: {{member.id}}</p>
-      <p><span>ID: {{member.name}}  &nbsp;    性别：</span>
+      <h2>Name: {{member.name}}</h2>
+      <p><span>ID: {{member.id}}   &nbsp;    性别：</span>
         <span *ngIf="member.sex=='M'" style="color:blue">男 </span>
         <span *ngIf="member.sex!='M'" style="color:red">女 </span>
       </p>
